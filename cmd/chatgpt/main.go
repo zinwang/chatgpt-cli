@@ -228,6 +228,11 @@ func run(cmd *cobra.Command, args []string) error {
 				fmt.Println("Bye!")
 				break
 			}
+            
+            if line == "clear" {
+                fmt.Print("\033[H\033[2J")
+                continue
+            }
 
 			if line == "exit" || line == "/q" {
 				fmt.Println("Bye!")
